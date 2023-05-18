@@ -46,12 +46,16 @@ const inserirItem = (e) => {
 };
 
 const removerItem = (indice) => {
+    const banco = getBanco();
     banco.splice(indice, 1);
+    setBanco(banco);
     atualizarTela();
 };
 
 const atualizarItem = (indice) => {
+    const banco = getBanco();
     banco[indice].status = banco[indice].status == '' ? 'checked' : ''; 
+    setBanco(banco);
     atualizarTela();
 }
 
